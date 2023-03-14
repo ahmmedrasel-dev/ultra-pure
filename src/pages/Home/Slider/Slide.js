@@ -12,7 +12,8 @@ import "swiper/css/navigation";
 import './slider.css'
 
 // import required modules
-import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
+import { Autoplay, Navigation, Pagination } from "swiper";
+import { Fade, LightSpeed, Slide as SlAni } from 'react-reveal';
 
 const Slide = () => {
   return (
@@ -22,7 +23,7 @@ const Slide = () => {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         }}
-        effect={"fade"}
+        loop={true}
         autoplay={{
           delay: 3500,
           disableOnInteraction: false,
@@ -31,16 +32,21 @@ const Slide = () => {
           clickable: true,
         }}
         speed={600}
-        modules={[Navigation, Autoplay, EffectFade, Pagination]}
+        modules={[Navigation, Autoplay, Pagination]}
         className="mySwiper"
       >
         <SwiperSlide>
           <div className="slider-content">
             <img src={wsp} className="w-full h-[600px]" alt="" />
-            <div className='absolute top-[50%] left-[50%] -translate-x-1/2'>
+            <div className='absolute top-[40%] left-[50%] -translate-x-1/2'>
               <div className="text-center flex gap-8 flex-col items-center">
-                <h2 className='text-5xl text-white text-center'>Water Softener Plant</h2>
-                <button className='btn bg-warning border-0 text-white hover:bg-primary w-44 '>Lern More</button>
+                <SlAni top>
+                  <h2 className='text-2xl lg:text-5xl text-white text-center'>Water Softener Plant</h2>
+                </SlAni>
+
+                <SlAni button duration="2000">
+                  <button className='btn border-0 bg-warning text-white hover:bg-primary lg:w-44 '>Lern More</button>
+                </SlAni>
               </div>
             </div>
           </div>
@@ -49,10 +55,14 @@ const Slide = () => {
         <SwiperSlide>
           <div className="slider-content">
             <img src={ro} className="w-full h-[600px]" alt="" />
-            <div className='absolute top-[50%] left-[50%] -translate-x-1/2'>
+            <div className='absolute top-[40%] left-[50%] -translate-x-1/2'>
               <div className="text-center flex gap-8 flex-col items-center">
-                <h2 className='text-5xl text-white text-center '>Water Softener Plant</h2>
-                <button className='btn bg-warning border-0 text-white hover:bg-primary w-44 '>Lern More</button>
+                <SlAni right >
+                  <h2 className='text-2xl lg:text-5xl text-white text-center'>Reverse Osmosis Plant </h2>
+                </SlAni>
+                <SlAni left duration="2000">
+                  <button className='btn border-0 bg-warning text-white hover:bg-primary lg:w-44 '>Lern More</button>
+                </SlAni>
               </div>
             </div>
           </div>
@@ -61,10 +71,15 @@ const Slide = () => {
           <div className="slider-content" data-swiper-parallax="-300">
             <img src={eog} className="w-full h-[600px]" alt="" />
 
-            <div className='absolute top-[50%] left-[50%] -translate-x-1/2'>
+            <div className='absolute top-[40%] left-[50%] -translate-x-1/2'>
               <div className="flex gap-8 flex-col items-center">
-                <h2 className='text-5xl text-white text-center'>Water Softener Plant</h2>
-                <button className='btn border-0 bg-warning text-white hover:bg-primary w-44 '>Lern More</button>
+                <SlAni left >
+                  <h2 className='text-2xl lg:text-5xl text-white text-center'>Effluent Treatment Plant</h2>
+                </SlAni>
+
+                <SlAni right duration="2000">
+                  <button className='btn border-0 bg-warning text-white hover:bg-primary lg:w-44 '>Lern More</button>
+                </SlAni>
               </div>
 
             </div>

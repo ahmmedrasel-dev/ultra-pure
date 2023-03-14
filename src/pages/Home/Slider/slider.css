@@ -39,10 +39,26 @@
 	height: 5px !important;
 	background: lightgray !important;
 	border-radius: 10px !important;
-	color: var(--pure) !important;
+	color: #fff !important;
 	opacity: 1 !important;
 }
 .swiper-pagination-bullet-active {
 	width: 100px !important;
 	background-color: #f79420 !important;
+}
+
+@media (max-width: 576px) {
+	.slider-content {
+		height: 400px;
+	}
+
+	.slide_next_btn {
+		height: 30px;
+		width: 30px;
+	}
+
+	.slide_prev_btn {
+		height: 30px;
+		width: 30px;
+	}
 }
