@@ -1,15 +1,12 @@
 import React from 'react';
-import './loader.css'
+import './loader.css';
+import logo from '../../../assets/images/logo.png';
 
 const Loader = () => {
   return (
-    <div className="loader-container">
-      <div class="ellipsis-spinner">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <p className='mt-4'>Loading ...</p>
+    <div class="container">
+      <div class="main">
+        <img src={logo} alt="" />
       </div>
     </div>
   );

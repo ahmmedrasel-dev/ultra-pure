@@ -7,6 +7,7 @@ import useTitle from '../../hooks/useTitle';
 const Register = () => {
   useTitle('Register')
   const navigate = useNavigate()
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
@@ -38,9 +39,12 @@ const Register = () => {
       const response = await axios.post('https://server.ultrapureengineering.com/api/register', {
         name, email, password
       })
-      form.reset();
+
+      console.log(response)
+
       if (response.status === 200) {
         toast.success(response.data.message);
+        form.reset();
         navigate('/login')
       }
     } catch (error) {

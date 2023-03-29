@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
-export const AuthinticateContext = createContext();
+import { toast } from 'react-hot-toast';
+export const AuthenticateContext = createContext();
 
 const AuthContext = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -38,21 +39,32 @@ const AuthContext = ({ children }) => {
   }, [token])
 
   const signInUser = async (email, password) => {
-    const response = await fetch('https://server.ultrapureengineering.com/api/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ email, password })
-    });
-    if (response.status === 200) {
-      const { token, _id } = await response.json();
-      localStorage.setItem('access_token', token);
-      localStorage.setItem('user_id', _id);
-      setToken(token);
-      setIsLoggedIn(true);
+    try {
+      const response = await fetch('http://localhost:5000/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email, password })
+      });
+
+      if (response.status === 200) {
+        const { token, _id } = await response.json();
+        localStorage.setItem('access_token', token);
+        localStorage.setItem('user_id', _id);
+        setToken(token);
+        setIsLoggedIn(true);
+      } else if (response.status === 401) {
+        const { message } = await response.json();
+        throw new Error(message);
+      } else {
+        throw new Error('An error occurred while logging in');
+      }
+    } catch (error) {
+      throw error;
     }
   };
+
 
 
   const logout = () => {
@@ -78,9 +90,9 @@ const AuthContext = ({ children }) => {
     setLoading
   };
   return (
-    <AuthinticateContext.Provider value={authInfo}>
+    <AuthenticateContext.Provider value={authInfo}>
       {children}
-    </AuthinticateContext.Provider>
+    </AuthenticateContext.Provider>
   );
 };
 

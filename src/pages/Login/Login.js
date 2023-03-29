@@ -1,11 +1,39 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { toast } from 'react-hot-toast';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { AuthenticateContext } from '../../context/AuthContext';
 import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
   useTitle('Login')
+
+  const { signInUser } = useContext(AuthenticateContext);
   const navigate = useNavigate()
-  const handleSubmit = () => {
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || '/';
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    // Check if email and password are provided
+    if (!email || !password) {
+      toast.error('Please provide email and password');
+      return;
+    }
+
+    try {
+      await signInUser(email, password);
+      form.reset();
+      toast.success('Login Successfully!');
+      navigate(from, { replace: true });
+    } catch (error) {
+      toast.error(error.message);
+    }
 
   }
   return (
@@ -32,8 +60,6 @@ const Login = () => {
               </div>
               <p className='text-center'>New to Wathin? <span className='text-primary cursor-pointer font-bold' onClick={() => navigate('/register')}>Create New Account</span></p>
             </form>
-
-
           </div>
         </div>
       </div>
