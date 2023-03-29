@@ -12,6 +12,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import './slider.css'
 
+
+
 // import required modules
 import { Autoplay, Navigation, Pagination } from "swiper";
 import { Slide as SlAni } from 'react-reveal';
@@ -40,13 +42,13 @@ const Slide = () => {
           <div className="slider-content">
             <img src={wsp} className="w-full h-[600px]" alt="" />
             <div className='absolute top-[40%] left-[50%] -translate-x-1/2'>
-              <div className="text-center flex gap-8 flex-col items-center">
+              <div className="text-center flex gap-8 flex-col items-center slider-inside-content">
                 <SlAni top>
                   <h2 className='text-2xl lg:text-5xl text-white text-center'>Water Softener Plant</h2>
                 </SlAni>
 
                 <SlAni button duration="2000">
-                  <button className='btn border-0 bg-warning text-white hover:bg-primary lg:w-44 '>Lern More</button>
+                  <button className='btn z-50 border-0 bg-warning text-white hover:bg-primary lg:w-44 '>Lern More</button>
                 </SlAni>
               </div>
             </div>
@@ -57,7 +59,7 @@ const Slide = () => {
           <div className="slider-content">
             <img src={ro} className="w-full h-[600px]" alt="" />
             <div className='absolute top-[40%] left-[50%] -translate-x-1/2'>
-              <div className="text-center flex gap-8 flex-col items-center">
+              <div className="text-center flex gap-8 flex-col items-center slider-inside-content">
                 <SlAni right >
                   <h2 className='text-2xl lg:text-5xl text-white text-center'>Reverse Osmosis Plant </h2>
                 </SlAni>
@@ -73,7 +75,7 @@ const Slide = () => {
             <img src={eog} className="w-full h-[600px]" alt="" />
 
             <div className='absolute top-[40%] left-[50%] -translate-x-1/2'>
-              <div className="flex gap-8 flex-col items-center">
+              <div className="flex gap-8 flex-col items-center slider-inside-content">
                 <SlAni left >
                   <h2 className='text-2xl lg:text-5xl text-white text-center'>Effluent Treatment Plant</h2>
                 </SlAni>
@@ -92,7 +94,7 @@ const Slide = () => {
             <img src={construction} className="w-full h-[600px]" alt="" />
 
             <div className='absolute top-[20%] left-[50%] -translate-x-1/2'>
-              <div className="flex gap-8 flex-col items-center">
+              <div className="flex gap-8 flex-col items-center slider-inside-content">
                 <SlAni left >
                   <h2 className='text-2xl text-warning font-bold lg:text-5xl  text-center'>We are Working Our Website</h2>
 
