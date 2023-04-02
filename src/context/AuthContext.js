@@ -54,6 +54,7 @@ const AuthContext = ({ children }) => {
         localStorage.setItem('user_id', _id);
         setToken(token);
         setIsLoggedIn(true);
+        setLoading(false)
       } else if (response.status === 401) {
         const { message } = await response.json();
         throw new Error(message);
