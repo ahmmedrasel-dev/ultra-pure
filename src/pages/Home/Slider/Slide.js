@@ -27,25 +27,28 @@ const Slide = () => {
         }}
         loop={true}
         autoplay={{
-          delay: 3500,
+          delay: 4000,
           disableOnInteraction: false,
         }}
         pagination={{
           clickable: true,
         }}
-        speed={600}
+        speed={800}
         modules={[Navigation, Autoplay, Pagination]}
         className="mySwiper"
       >
         <SwiperSlide>
           <div className="slider-content">
             <img src={wsp} className="w-full h-[600px]" alt="" />
-            <div className="absolute top-[30%] left-[50%] -translate-x-1/2">
-              <div className="text-center flex gap-8 flex-col items-center slider-inside-content">
+            <div className="absolute top-[5%] left-[50%] -translate-x-1/2">
+              <div className="text-center flex gap-4 flex-col items-center slider-inside-content">
                 <SlAni top>
-                  <h2 className="text-2xl lg:text-5xl text-white text-center">
-                    WTB (Water Softener Plant & Iron Remover Plant)
+                  <h2 className="text-xl lg:text-3xl text-white text-center mb-0">
+                    Water Treatment Plant (WTP)
                   </h2>
+                  <small className="text-white text-sm py-0 my-0">
+                    Water Softener Plant, Iron Remover Plant
+                  </small>
                 </SlAni>
 
                 <SlAni button duration="2000">
@@ -60,19 +63,19 @@ const Slide = () => {
         <SwiperSlide>
           <div className="slider-content">
             <img src={wtm_slider2} className="w-full h-[600px]" alt="" />
-            <div className="absolute top-[20%] left-[50%] -translate-x-1/2">
-              <div className="text-center flex gap-8 flex-col items-center slider-inside-content">
+            <div className="absolute top-[55%] left-[50%] -translate-x-1/2">
+              <div className="text-center flex gap-4 flex-col items-center slider-inside-content">
                 <SlAni top>
-                  <h2 className="text-2xl lg:text-5xl text-white text-center">
+                  <h2 className="text-xl lg:text-3xl text-white text-center">
                     Water Treatment Media
                   </h2>
                 </SlAni>
 
                 <SlAni>
-                  <ul className="text-left">
+                  <ul className="flex flex-wrap justify-between w-[400px]">
                     <li className="text-left text-white flex items-center gap-2 font-medium">
                       <FaRegCheckSquare />
-                      Iron Exchange Resin
+                      Ion Exchange Resin
                     </li>
                     <li className="text-left text-white flex items-center gap-2 font-medium">
                       <FaRegCheckSquare />
@@ -94,7 +97,7 @@ const Slide = () => {
                 </SlAni>
 
                 <SlAni button duration="2000">
-                  <button className="btn z-50 border-0 bg-warning text-white hover:bg-primary lg:w-44 ">
+                  <button className="btn z-50 border-0 bg-warning text-white hover:bg-primary lg:w-32 ">
                     Lern More
                   </button>
                 </SlAni>
@@ -105,15 +108,15 @@ const Slide = () => {
         <SwiperSlide>
           <div className="slider-content">
             <img src={ro} className="w-full h-[600px]" alt="" />
-            <div className="absolute top-[40%] left-[50%] -translate-x-1/2">
-              <div className="text-center flex gap-8 flex-col items-center slider-inside-content">
+            <div className="absolute top-[40%] left-[20%] -translate-x-1/2">
+              <div className="text-center flex gap-4 flex-col items-center slider-inside-content">
                 <SlAni right>
-                  <h2 className="text-2xl lg:text-5xl text-white text-center">
+                  <h2 className="text-xl lg:text-3xl text-white text-center">
                     Reverse Osmosis Plant{" "}
                   </h2>
                 </SlAni>
                 <SlAni left duration="2000">
-                  <button className="btn border-0 bg-warning text-white hover:bg-primary lg:w-44 ">
+                  <button className="btn z-50 border-0 bg-warning text-white hover:bg-primary lg:w-32 ">
                     Lern More
                   </button>
                 </SlAni>
@@ -125,16 +128,16 @@ const Slide = () => {
           <div className="slider-content" data-swiper-parallax="-300">
             <img src={eog} className="w-full h-[600px]" alt="" />
 
-            <div className="absolute top-[40%] left-[50%] -translate-x-1/2">
-              <div className="flex gap-8 flex-col items-center slider-inside-content">
+            <div className="absolute top-[40%] left-[60%] -translate-x-1/2">
+              <div className="flex gap-4 flex-col items-center slider-inside-content">
                 <SlAni left>
-                  <h2 className="text-2xl lg:text-5xl text-white text-center">
+                  <h2 className="text-xl lg:text-3xl text-white text-center">
                     Effluent Treatment Plant
                   </h2>
                 </SlAni>
 
                 <SlAni right duration="2000">
-                  <button className="btn border-0 bg-warning text-white hover:bg-primary lg:w-44 ">
+                  <button className="btn z-50 border-0 bg-warning text-white hover:bg-primary lg:w-32 ">
                     Lern More
                   </button>
                 </SlAni>

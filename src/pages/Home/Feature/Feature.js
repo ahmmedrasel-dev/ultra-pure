@@ -6,6 +6,7 @@ import SingleFeture from "./SingleFeture";
 import { FaHandsHelping } from "react-icons/fa";
 import { VscWorkspaceTrusted } from "react-icons/vsc";
 import { TbTruckDelivery } from "react-icons/tb";
+import { IoBulb } from "react-icons/io5";
 
 const Feature = () => {
   const features = [
@@ -39,7 +40,7 @@ const Feature = () => {
     },
     {
       _id: 5,
-      icon: <VscWorkspaceTrusted />,
+      icon: <IoBulb />,
       title: "Innovation",
       summary:
         "Our team of experts thrives on solving complex challenges with inventive solutions, ensuring that our clients benefit from the latest advancements in water treatment.",
