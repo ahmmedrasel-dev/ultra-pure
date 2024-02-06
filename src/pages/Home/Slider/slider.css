@@ -8,7 +8,7 @@
 .slider-inside-content::before {
   position: absolute;
   content: "";
-  background-color: rgba(0, 0, 0, 0.617);
+  background-color: #000d2898;
   width: 100%;
   height: 100%;
   top: 0;

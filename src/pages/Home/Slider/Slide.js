@@ -5,6 +5,7 @@ import ro from "../../../assets/images/ro.jpeg";
 import eog from "../../../assets/images/eog.jpeg";
 import wtm_slider2 from "../../../assets/images/wtm_slider2.jpg";
 import { FaRegCheckSquare } from "react-icons/fa";
+
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 
 // Import Swiper styles
@@ -40,7 +41,7 @@ const Slide = () => {
         <SwiperSlide>
           <div className="slider-content">
             <img src={wsp} className="w-full h-[600px]" alt="" />
-            <div className="absolute top-[5%] left-[50%] -translate-x-1/2">
+            <div className="absolute top-[40%] left-[50%] -translate-x-1/2">
               <div className="text-center flex gap-4 flex-col items-center slider-inside-content">
                 <SlAni top>
                   <h2 className="text-xl lg:text-3xl text-white text-center mb-0">
@@ -63,7 +64,7 @@ const Slide = () => {
         <SwiperSlide>
           <div className="slider-content">
             <img src={wtm_slider2} className="w-full h-[600px]" alt="" />
-            <div className="absolute top-[55%] left-[50%] -translate-x-1/2">
+            <div className="absolute top-[32%] left-[50%] -translate-x-1/2">
               <div className="text-center flex gap-4 flex-col items-center slider-inside-content">
                 <SlAni top>
                   <h2 className="text-xl lg:text-3xl text-white text-center">
@@ -72,7 +73,7 @@ const Slide = () => {
                 </SlAni>
 
                 <SlAni>
-                  <ul className="flex flex-wrap justify-between w-[400px]">
+                  <ul className="flex flex-wrap gap-3 w-[540px]">
                     <li className="text-left text-white flex items-center gap-2 font-medium">
                       <FaRegCheckSquare />
                       Ion Exchange Resin
@@ -108,7 +109,7 @@ const Slide = () => {
         <SwiperSlide>
           <div className="slider-content">
             <img src={ro} className="w-full h-[600px]" alt="" />
-            <div className="absolute top-[40%] left-[20%] -translate-x-1/2">
+            <div className="absolute top-[40%] left-[50%] -translate-x-1/2">
               <div className="text-center flex gap-4 flex-col items-center slider-inside-content">
                 <SlAni right>
                   <h2 className="text-xl lg:text-3xl text-white text-center">
@@ -128,7 +129,7 @@ const Slide = () => {
           <div className="slider-content" data-swiper-parallax="-300">
             <img src={eog} className="w-full h-[600px]" alt="" />
 
-            <div className="absolute top-[40%] left-[60%] -translate-x-1/2">
+            <div className="absolute top-[40%] left-[50%] -translate-x-1/2">
               <div className="flex gap-4 flex-col items-center slider-inside-content">
                 <SlAni left>
                   <h2 className="text-xl lg:text-3xl text-white text-center">
